@@ -1,0 +1,7 @@
+[
+  {
+    "date": "2026-02-20 23:11",
+    "title": "hurdle after hurdle: getting to know neocities",
+    "content": "<p>now i know how the source code looks, but this was the best i could do at the moment. i really did not want to make my blog posts via editing a html file and i just realised that neocities actually does not support php! this was the second best thing i came up with.</p><p>of course this is probably not the best approach and as a prolific vibecoder, i could have done better. but it gets the job done right now. i wonder how this thing will react to code snippets and images...</p><p>i am not really sure how frequent my activity on here will be, but rest assured that i will not post dogshit.</p><p>let's take a moment to appreciate this particular snippet of code:</p><pre>const emailSpan = document.querySelector('.email');\nif (emailSpan) {\n    emailSpan.addEventListener('click', function () {\n        const email = this.getAttribute('data-email');\n        copyToClipboard(email, 'email copied');\n    });\n}</pre><p>sorry this post is completely incoherent but i wanted to test shit out!!! works like a charm</p>"
+  }
+]

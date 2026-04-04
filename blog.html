@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog - ohhbaro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <p>@ohhbaro</p>
+        <ul>
+            <li><a href="index.html">back</a></li>
+            <hr>
+        </ul>
+        
+        <div class="longpara" id="blog-container">
+            <p>loading posts...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        fetch('posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                const container = document.getElementById('blog-container');
+                container.innerHTML = '';
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                posts.forEach(post => {
+                    const postDiv = document.createElement('div');
+                    postDiv.style.marginBottom = '50px';
+                    postDiv.innerHTML = `
+                        <h2 class="white" style="font-size: 24px; margin-bottom: 5px; font-weight: 300;">${post.title}</h2>
+                        <small style="color: #7F7F7F; display: block; margin-bottom: 15px;">${post.date}</small>
+                        ${post.content}
+                    `;
+                    container.appendChild(postDiv);
+                });
+            })
+            .catch(error => {
+                document.getElementById('blog-container').innerHTML = '<p>failed to load posts. sorry about that.</p>';
+                console.error('error loading posts:', error);
+            });
+    </script>
+</body>
+</html>

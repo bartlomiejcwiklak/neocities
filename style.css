@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    padding: 45px;
+}
+
+a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+a:hover, .email:hover, .discord:hover {
+    color: #7F7F7F;
+    cursor: pointer;
+}
+
+p {
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: #7F7F7F;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    z-index: 9999;
+}
+
+*::selection {
+  background: #cc0000;
+  color: #ffffff;
+}
+
+.special {
+    padding-top: 10px;
+}
+
+.email, .discord {
+    opacity: 100%;
+    color: white;
+}
+
+.tooltip {
+    position: fixed;
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    pointer-events: none;
+    display: none;
+    white-space: nowrap;
+    z-index: 10000;
+}
+
+hr {
+    margin-bottom: 10px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.longpara {
+    max-width: 600px;
+    width: 100%;
+    line-height: 25px;
+}
+
+.white, code{
+    color: white;
+}
+
+pre {
+    background-color: #0b0b0b;
+    color: white;
+    padding: 16px;
+    border-radius: 0px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
